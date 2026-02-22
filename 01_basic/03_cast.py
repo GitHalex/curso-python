@@ -35,3 +35,5 @@ print(round(2.51))  # Redondea 2.51 al entero más cercano. Resultado: 3
 
 # Este genera un error y se comenta para evitar conflicto en la ejecución
 # print(int("Hola mundo"))  # ❌ Esto generaría un ValueError porque "Hola mundo" no es un número
+
+# Limpia la consola al finalizar el programa
