@@ -14,7 +14,7 @@ lista2 = ["manzanas", "peras", "plátanos"] # lista de cadenas
 lista3 = [1, "hola", 3.14, True] # lista de tipos mixtos
 
 lista_vacia = []
-lista_de_listas = [[1, 2], ['calcetin', 4]]
+lista_de_listas: list = [[1, 2], ['calcetin', 4]]
 matrix = [[1, 2], [2, 3], [4, 5]]
 
 print(lista1)

@@ -139,14 +139,47 @@ print(mensaje)
 # Ejercicio 1: Determinar el mayor de dos números
 # Pide al usuario que introduzca dos números y muestra un mensaje
 # indicando cuál es mayor o si son iguales
+primer_numero = float(input("Introduce el primer número: "))
+segundo_numero = float(input("Introduce el segundo número: "))  
+if primer_numero > segundo_numero:
+  print(f"El número {primer_numero} es mayor que {segundo_numero}")
+elif segundo_numero > primer_numero:
+  print(f"El número {segundo_numero} es mayor que {primer_numero}")
+else:
+  print("Los números son iguales")
 
 # Ejercicio 2: Calculadora simple
 # Pide al usuario dos números y una operación (+, -, *, /)
 # Realiza la operación y muestra el resultado (maneja la división entre zero)
+numero1: int = int(input("Introduce el primer número: "))
+numero2: int = int(input("Introduce el segundo número: "))
+operacion: str = input("Introduce la operación (+, -, *, /): ")
+
+if operacion == "+":
+  resultado = numero1 + numero2
+  print(f"El resultado de {numero1} + {numero2} es: {resultado}")
+elif operacion == "-":
+  resultado = numero1 - numero2
+  print(f"El resultado de {numero1} - {numero2} es: {resultado}")
+elif operacion == "*":   
+  resultado = numero1 * numero2
+  print(f"El resultado de {numero1} * {numero2} es: {resultado}")
+elif operacion == "/":
+  if numero2 != 0:
+    resultado = numero1 / numero2
+    print(f"El resultado de {numero1} / {numero2} es: {resultado}")
+  else:
+    print("Error: No se puede dividir entre cero")
+else:
+  print("Operación no válida")
 
 # Ejercicio 3: Año bisiesto
 # Pide al usuario que introduzca un año y determina si es bisiesto.
 # Un año es bisiesto si es divisible por 4, excepto si es divisible por 100 pero no por 400.
+anio: int = int(input("Introduce un año: "))
+if (anio % 4 == 0 and anio % 100 != 0) or (anio % 400 == 0):
+  print(f"El año {anio} es bisiesto")
+else:  print(f"El año {anio} no es bisiesto")
 
 # Ejercicio 4: Categorizar edades
 # Pide al usuario que introduzca una edad y la clasifique en:
