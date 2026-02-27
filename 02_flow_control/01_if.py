@@ -188,3 +188,16 @@ else:  print(f"El año {anio} no es bisiesto")
 # - Adolescente (13-17 años)
 # - Adulto (18-64 años)
 # - Adulto mayor (65 años o más)
+edad: int = int(input("Introduce una edad: "))
+if edad >= 0 and edad <= 2:
+  print("Eres un bebé")
+elif edad >= 3 and edad <= 12:
+  print("Eres un niño")
+elif edad >= 13 and edad <= 17:
+  print("Eres un adolescente")
+elif edad >= 18 and edad <= 64:
+  print("Eres un adulto")
+elif edad >= 65:
+  print("Eres un adulto mayor")
+else:
+  print("Edad no válida") 

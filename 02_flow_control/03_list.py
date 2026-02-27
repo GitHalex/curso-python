@@ -11,10 +11,10 @@ if system("clear") != 0: system("cls")
 print("\nCrear listas")
 lista1 = [1, 2, 3, 4, 5] # lista de enteros
 lista2 = ["manzanas", "peras", "plátanos"] # lista de cadenas
-lista3 = [1, "hola", 3.14, True] # lista de tipos mixtos
+lista3: list[int | str | float | bool] = [1, "hola", 3.14, True] # lista de tipos mixtos
 
 lista_vacia = []
-lista_de_listas: list = [[1, 2], ['calcetin', 4]]
+lista_de_listas: list[int | str] = [[1, 2], ['calcetin', 4]]
 matrix = [[1, 2], [2, 3], [4, 5]]
 
 print(lista1)
@@ -69,20 +69,25 @@ print("Longitud de la lista", len(lista1))
 
 # Ejercicio 1: El mensaje secreto
 # Dada la siguiente lista:
-# mensaje = ["C", "o", "d", "i", "g", "o", " ", "s", "e", "c", "r", "e", "t", "o"]
+mensaje = ["C", "o", "d", "i", "g", "o", " ", "s", "e", "c", "r", "e", "t", "o"]
 # Utilizando slicing y concatenación, crea una nueva lista que contenga solo el mensaje "secreto".
-
+mensaje_secreto: list[str] = mensaje[7:]
+print(str(mensaje_secreto))
 # Ejercicio 2: Intercambio de posiciones
 # Dada la siguiente lista:
-# numeros = [10, 20, 30, 40, 50]
+numeros = [10, 20, 30, 40, 50]
 # Intercambia la primera y la última posición utilizando solo asignación por índice.
+numeros[0], numeros[-1] = numeros[-1], numeros[0] # Intercambio en una sola línea.
+print(numeros)
 
 # Ejercicio 3: El sándwich de listas
 # Dadas las siguientes listas:
-# pan = ["pan arriba"]
-# ingredientes = ["jamón", "queso", "tomate"]
-# pan_abajo = ["pan abajo"]
+pan = ["pan arriba"]
+ingredientes = ["jamón", "queso", "tomate"]
+pan_abajo = ["pan abajo"]
 # Crea una lista llamada sandwich que contenga el pan de arriba, los ingredientes y el pan de abajo, en ese orden.
+sandwhich: list[str] = pan + ingredientes + pan_abajo
+print(sandwhich)
 
 # Ejercicio 4: Duplicando la lista
 # Dada una lista:
