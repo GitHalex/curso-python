@@ -82,6 +82,10 @@ print(f"El número que has introducido es {numero}")
 
 # Ejercicio 1: Cuenta atrás
 # Imprime los números del 10 al 1 usando un bucle while.
+i = 10
+while i > 0:
+  print(i)
+  i -= 1
 print("\nEjercicio 1:")
 
 # Ejercicio 2: Suma de números pares (while)
